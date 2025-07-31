@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,38 +15,37 @@
         }
 
         html {
-            font-size: 16px; /* 1rem = 16px base */
+            font-size: 16px;
         }
 
         body {
-            background: #121212;
-            color: #2C2C2C;
+            background: #000;
+            color: #00FF00;
             font-family: 'JetBrains Mono', monospace;
             overflow: hidden;
             min-height: 100vh;
             position: relative;
         }
 
-.popup-video {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 1rem;
-    width: 400px;
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 0.75rem;
-    backdrop-filter: blur(0.5rem);
-    z-index: 1000;
-    box-shadow: 0 0 1.25rem rgba(255,255,255,0.1);
-}
+        .popup-video {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 1rem;
+            width: 400px;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 0.75rem;
+            backdrop-filter: blur(0.5rem);
+            z-index: 1000;
+            box-shadow: 0 0 1.25rem rgba(255,255,255,0.1);
+        }
 
-        /* Loading Screen */
         .loading-screen {
             position: fixed;
             top: 0; left: 0;
             width: 100vw; height: 100vh;
-            background: #FF0000;
+            background: #2C2C2C;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -65,33 +63,28 @@
             animation: pulseSkull 2s ease-in-out infinite;
         }
 
-@keyframes pulseSkull {
-    0%, 100% {
-        transform: scale(1);
-        box-shadow: 0 0 1.25vw rgba(255, 255, 255, 0.3);
-    }
-    50% {
-        transform: scale(1.1);
-        box-shadow: 0 0 2.5vw rgba(255, 255, 255, 0.8);
-    }
-}
+        @keyframes pulseSkull {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 1.25vw rgba(255, 255, 255, 0.3);
+            }
+            50% {
+                transform: scale(1.1);
+                box-shadow: 0 0 2.5vw rgba(255, 255, 255, 0.8);
+            }
+        }
 
-.glitch-text {
-    position: relative;
-    color: #944747;
-    font-size: 2.0rem;
-    font-family: 'Orbitron', monospace;
-    font-weight: 700;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.19rem;
-    line-height: 1.6;
-}
-
-
-
-
-
+        .glitch-text {
+            position: relative;
+            color: #00FF00;
+            font-size: 2.0rem;
+            font-family: 'Orbitron', monospace;
+            font-weight: 700;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.19rem;
+            line-height: 1.6;
+        }
 
         @keyframes blink {
             0%, 50% { opacity: 1; }
@@ -105,7 +98,6 @@
             }
         }
 
-        /* Main Content */
         .main-content {
             opacity: 0;
             animation: fadeIn 2s ease-in-out 0.5s forwards;
@@ -121,7 +113,6 @@
             to { opacity: 1; }
         }
 
-        /* Grid background */
         body::before {
             content: '';
             position: fixed;
@@ -130,26 +121,25 @@
             background-image:
                 linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-            background-size: 1.875rem 1.875rem; /* 30px */
+            background-size: 1.875rem 1.875rem;
             z-index: -1;
         }
 
         .container {
             text-align: center;
-            max-width: 50rem; /* 800px */
+            max-width: 50rem;
             padding: 2.5rem;
         }
 
-        /* Avatar container */
         .avatar-container {
             margin-bottom: 2.5rem;
             position: relative;
         }
 
         .avatar {
-            width: 31.25rem; /* 500px */
+            width: 31.25rem;
             max-width: 90vw;
-            height: 18.75rem; /* 300px */
+            height: 18.75rem;
             max-height: 54vw;
             border-radius: 0%;
             border: 0.188rem solid rgba(255,255,255,0.3);
@@ -194,31 +184,26 @@
             z-index: 1;
         }
 
-        /* Main title */
         .pwned-title {
             font-family: 'Orbitron', monospace;
-            font-size: 3.75rem; /* 60px */
+            font-size: 3.75rem;
             font-weight: 900;
             letter-spacing: 0.1rem;
             margin-bottom: 1.25rem;
-            background: linear-gradient(45deg, #00FF00, #888);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #00FF00;
             text-transform: uppercase;
             animation: glow 2s ease-in-out infinite alternate;
         }
 
         @keyframes glow {
             from {
-                filter: drop-shadow(0 0 1.25rem rgba(255,255,255,0.3));
+                filter: drop-shadow(0 0 1.25rem rgba(0,255,0,0.3));
             }
             to {
-                filter: drop-shadow(0 0 2.5rem rgba(255,255,255,0.6));
+                filter: drop-shadow(0 0 2.5rem rgba(0,255,0,0.6));
             }
         }
 
-        /* Terminal section */
         .terminal-section {
             background: rgba(0,0,0,0.8);
             border: 0.063rem solid rgba(255,255,255,0.2);
@@ -250,11 +235,16 @@
             border: 0.063rem solid rgba(255,255,255,0.3);
         }
 
-        .terminal-title {
-            font-family: 'Orbitron', monospace;
-            font-size: 1.375rem;
-            color: #00FFF2;
-            letter-spacing: 0.1rem;
+        .terminal-title,
+        .prompt,
+        .command,
+        .success,
+        .footer-message,
+        .learn-title,
+        .learn-item,
+        .poster-caption,
+        .discord-link {
+            color: #00FF00 !important;
         }
 
         .command-line {
@@ -267,16 +257,15 @@
             text-align: left;
         }
 
-.command-linesxb {
-    font-size: 2.5rem; 
-    margin: 0.938rem 0;
-    opacity: 0;
-    animation: typeIn 0.5s ease forwards;
-    display: block; 
-    text-align: center;
-    width: 100%;
-}
-
+        .command-linesxb {
+            font-size: 2.5rem; 
+            margin: 0.938rem 0;
+            opacity: 0;
+            animation: typeIn 0.5s ease forwards;
+            display: block; 
+            text-align: center;
+            width: 100%;
+        }
 
         .command-line:nth-child(2) { animation-delay: 2.5s; }
         .command-line:nth-child(3) { animation-delay: 3s; }
@@ -288,21 +277,6 @@
             to {
                 opacity: 1;
             }
-        }
-
-        .prompt {
-            color: rgba(255,255,255,0.5);
-            margin-right: 0.625rem;
-        }
-
-        .command {
-            color: #fff;
-            font-weight: 500;
-        }
-
-        .success {
-            color: #4ade80;
-            font-weight: 600;
         }
 
         .cursor {
@@ -319,16 +293,13 @@
             51%, 100% { opacity: 0; }
         }
 
-        /* Footer message */
         .footer-message {
             margin-top: 2.5rem;
             font-size: 0.875rem;
-            color: rgba(255,255,255,0.5);
             letter-spacing: 0.125rem;
             text-transform: uppercase;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .pwned-title {
                 font-size: 2rem;
@@ -363,7 +334,6 @@
             font-family: 'Orbitron', monospace;
             font-size: 0.875rem;
             font-weight: 700;
-            color: #fff;
             margin-bottom: 0.75rem;
             letter-spacing: 0.063rem;
             text-transform: uppercase;
@@ -381,14 +351,12 @@
             padding: 0.625rem 0.938rem;
             border-radius: 0.375rem;
             font-size: 0.813rem;
-            color: #4ade80;
             font-family: 'JetBrains Mono', monospace;
             transition: all 0.3s ease;
         }
 
         .learn-item:hover {
             background: rgba(255, 255, 255, 0.1);
-            color: #fff;
             transform: translateX(0.313rem);
         }
 
@@ -410,204 +378,60 @@
             opacity: 0.8;
         }
 
-        .discord-link {
-            font-size: 1rem;
-            color: #fff;
-            font-family: 'JetBrains Mono', monospace;
-            letter-spacing: 0.063rem;
-            opacity: 0.8;
+        .avatar.force-hover {
+            transform: scale(1.05);
+            box-shadow:
+                0 0 3.125rem rgba(255,255,255,0.4),
+                inset 0 0 1.875rem rgba(255,255,255,0.2);
         }
 
-        .avatar.force-hover {
-    transform: scale(1.05);
-    box-shadow:
-        0 0 3.125rem rgba(255,255,255,0.4),
-        inset 0 0 1.875rem rgba(255,255,255,0.2);
-}
+        .learn-item.force-hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(0.313rem);
+        }
 
-.learn-item.force-hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    transform: translateX(0.313rem);
-}
+        .wanted-poster {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            width: 260px;
+            background: #111;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 0.5rem;
+            box-shadow: 0 0 1.25rem rgba(255, 255, 255, 0.1);
+            padding: 0.5rem;
+            z-index: 1000;
+            text-align: center;
+            font-family: 'JetBrains Mono', monospace;
+        }
 
-.wanted-poster {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    width: 260px;
-    background: #111;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 0.5rem;
-    box-shadow: 0 0 1.25rem rgba(255, 255, 255, 0.1);
-    padding: 0.5rem;
-    z-index: 1000;
-    text-align: center;
-    font-family: 'JetBrains Mono', monospace;
-}
+        .poster-img {
+            width: 100%;
+            border-radius: 0.3rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            object-fit: cover;
+        }
 
-.poster-img {
-    width: 100%;
-    border-radius: 0.3rem;
-    border: 1px solid rgba(255,255,255,0.1);
-    object-fit: cover;
-}
+        .poster-caption {
+            margin-top: 0.5rem;
+            font-size: 2rem;
+            letter-spacing: 0.05rem;
+        }
 
-.poster-caption {
-    margin-top: 0.5rem;
-    font-size: 2rem;
-    color: #4ade80;
-    letter-spacing: 0.05rem;
-}
-
-.pin {
-    position: absolute;
-    top: -0.4rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0.75rem;
-    height: 0.75rem;
-    background: #ccc;
-    border-radius: 50%;
-    box-shadow: 0 0 0.25rem rgba(255,255,255,0.5);
-    z-index: 2;
-}
-
-
+        .pin {
+            position: absolute;
+            top: -0.4rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0.75rem;
+            height: 0.75rem;
+            background: #ccc;
+            border-radius: 50%;
+            box-shadow: 0 0 0.25rem rgba(255,255,255,0.5);
+            z-index: 2;
+        }
     </style>
 </head>
 <body>
-
-<audio id="bg-music" autoplay loop>
-    <source src="https://cdn.discordapp.com/attachments/1268421425987977247/1392184117168308365/online-video-cutter.com_1.mp3?ex=686e9bff&is=686d4a7f&hm=ed8f8dff1123c5b5fe167d6100ac79e51b588177a8953b6907de90d389944e53&" type="audio/mpeg">
-</audio>
-
-
-
-    <!-- Loading Screen -->
-<div class="loading-screen">
-    <div class="loading-text glitch-text" data-text="Security Alert saad in the system ..">
-        سعد يبي بيسييييييييييييييييييييييييي ..<br>discord.gg/zg4u saad is here
-    </div>
-</div>
-
-
-<div class="wanted-poster">
-    <div class="pin"></div>
-    <img src="https://cdn.discordapp.com/avatars/746728845733789808/1e01b7248422a328e03d616d9e6a7a83.webp?size=1024" alt="Wanted Poster" class="poster-img" />
-    <div class="command-linesxb">saad is here</div>
-</div>
-
-    <!-- Main Content -->
-    <div class="main-content">
-        <div class="container">
-            <div class="avatar-container">
-                <div class="avatar">
-                    <img src="https://cdn.discordapp.com/avatars/746728845733789808/1e01b7248422a328e03d616d9e6a7a83.webp?size=1024" alt="avatar" style="width: 100%; height: 100%; object-fit: cover;" />
-                </div>
-            </div>
-
-            <h1 class="pwned-title">Hacked BY Saad</h1>
-
-            <div class="terminal-section">
-                <div class="terminal-header">
-                    <div class="terminal-dots">
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                    </div>
-                    <div class="terminal-title">discord.gg/zg4u</div>
-                </div>
-
-                <div class="command-line">
-                    <span class="prompt">saad:ابي بيسي تكفى</span>
-                    <span class="command">تكفى</span>
-                </div>
-
-                <div class="command-line">
-                    <span class="success">
-                        saad : السلام عليكم ورحمة الله وبركاته<br />
-                        مطلبي بيسي جديد  <br />
-                        ادعموني اشتريه واقنعو الوالد                    </span>
-                </div>
-
-            </div>
-
-            <div class="footer-message">saad is here •ولدك</div>
-
-                <div class="learn-box">
-        <div class="learn-title">تكفى ابي بيسي :</div>
-        <div class="learn-grid">
-            <div class="learn-item">موااااااااح</div>
-            <div class="learn-item">ادعموني بلييييييز</div>
-            <div class="learn-item">احبكم كلكم</div>
-            <div class="learn-item">اقنعو الوالد</div>
-            <div class="learn-footer">
-                <img src="https://cdn.discordapp.com/avatars/746728845733789808/1e01b7248422a328e03d616d9e6a7a83.webp?size=1024" alt="Discord" class="discord-icon" />
-                <span class="discord-link">discord.gg/zg4u</span>
-            </div>
-        </div>
-    </div>
-    
-        </div>
-    </div>
-
-    <script>
-        // Preload effect
-        window.addEventListener('load', function () {
-            setTimeout(() => {
-                document.querySelector('.loading-screen').style.display = 'none';
-            }, 2000);
-        });
-
-        // Subtle screen flicker
-        setInterval(() => {
-            if (Math.random() < 0.50) {
-                document.body.style.filter = 'brightness(1.2)';
-                setTimeout(() => {
-                    document.body.style.filter = 'brightness(1)';
-                }, 50);
-            }
-        }, 2000);
-    </script>
-
-    <script>
-    window.addEventListener('load', () => {
-        const avatar = document.querySelector('.avatar');
-
-        setTimeout(() => {
-            avatar.classList.add('force-hover');
-
-            setTimeout(() => {
-                avatar.classList.remove('force-hover');
-            }, 3000);
-        }, 5000);
-    });
-</script>
-
-<script>
-    window.addEventListener('load', () => {
-        const items = document.querySelectorAll('.learn-item');
-        let index = 0;
-
-        function applyEffectSequentially() {
-            if (index >= items.length) {
-                index = 0;
-            }
-
-            const item = items[index];
-            item.classList.add('force-hover');
-
-            setTimeout(() => {
-                item.classList.remove('force-hover');
-                index++;
-                setTimeout(applyEffectSequentially, 1500); 
-            }, 1000); 
-        }
-
-        setTimeout(applyEffectSequentially, 6000);
-    });
-</script>
-
 </body>
 </html>
